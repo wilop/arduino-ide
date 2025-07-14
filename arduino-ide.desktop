@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Arduino IDE
+GenericName=Arduino IDE
+Comment=An Open-source electronics platform for interactive projects.
+Exec=arduino-ide %U
+Path=/usr/bin
+Icon=arduino-ide
+Terminal=false
+MimeType=text/x-arduino
+Categories=Development;Education;IDE;Electronics;
+Keywords=embedded electronics;avr;microcontroller;
+StartupWMClass=Arduino IDE
