@@ -1,5 +1,5 @@
 pkgname=arduino-ide
-pkgver=2.3.6
+pkgver=2.3.7
 pkgrel=1
 pkgdesc="Arduino IDE 2.x: The open-source software for programming Arduino boards (binary version)."
 arch=(x86_64)
@@ -14,10 +14,8 @@ makedepends=(unzip)
 provides=(arduino-ide)
 options=(!strip)
 source=("https://github.com/arduino/arduino-ide/releases/download/${pkgver}/arduino-ide_${pkgver}_Linux_64bit.zip"
-        "https://www.arduino.cc/wiki/370832ed4114dd35d498f2f449b4781e/arduino.svg"
         "arduino-ide.desktop")
-sha256sums=('33bf2cb868abf92b3d160f7433dcd6348cec1c9e633b5c9e1c761f630f87b82b'
-            '4137981bcb4057c2e0092f22faea287767f102e0b48497d22cd55e8d6988e4ac'
+sha256sums=('09f940d03350d286094b5a9e4fb297b7d156b1789e827f0d2bcf77c09fc04a78'
             'SKIP')
 noextract=(arduino-ide_${pkgver}_Linux_64bit.zip)
 
@@ -33,6 +31,6 @@ package() {
 	install -dm755 "$pkgdir/usr/bin"
 	ln -s "/opt/arduino-ide/arduino-ide" "$pkgdir/usr/bin/arduino-ide"
 	install -Dm644 "$srcdir/arduino-ide.desktop" "$pkgdir/usr/share/applications/arduino-ide.desktop"
-	install -Dm644 "$srcdir/arduino.svg" "$pkgdir/usr/share/pixmaps/arduino-ide.svg"
+	install -Dm644 "$srcdir/arduino-ide/arduino-ide_${pkgver}_Linux_64bit/resources/app/resources/icons/512x512.png" "$pkgdir/usr/share/pixmaps/arduino-ide.png"
 }
 
