@@ -1,5 +1,5 @@
 pkgname=arduino-ide
-pkgver=2.3.8
+pkgver=2.3.10
 pkgrel=1
 pkgdesc="Arduino IDE 2.x: The open-source software for programming Arduino boards (binary version)."
 arch=(x86_64)
@@ -15,8 +15,8 @@ provides=(arduino-ide)
 options=(!strip)
 source=("https://github.com/arduino/arduino-ide/releases/download/${pkgver}/arduino-ide_${pkgver}_Linux_64bit.zip"
         "arduino-ide.desktop")
-sha256sums=('226932e402fbdd6763f3988257cf0f69050934f92cdd01ede9dab99e1a238bdb'
-            'SKIP')
+sha256sums=('cc8a0b01e763d4646b670ce70c1bc8c389a0fa14ab556dcc0749c03f475a7975'
+            '305bf99773e4dbf2331adaf4043f6d2f24191d9044e4c9cee67cc7b4d8664cb9')
 noextract=(arduino-ide_${pkgver}_Linux_64bit.zip)
 
 prepare() {
